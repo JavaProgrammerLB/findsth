@@ -4,7 +4,7 @@ import requests
 import logging
 
 protocol='http'
-topDomainName=['.com','.cn','.net','.de','.fi','.co.jp', '.ru']
+topDomainName=['.com','.cn','.net','.de','.fi','.co.jp', '.ru','me']
 argv=sys.argv[1:]
 print(argv)
 

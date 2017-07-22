@@ -6,6 +6,6 @@ python findsth.py [domains]
 
 #### For Example: 
 ```python 
-python findsth.py nice
+python findsth.py find
 ```
 

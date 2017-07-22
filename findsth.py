@@ -2,11 +2,13 @@ import webbrowser
 import sys
 import requests
 import logging
+import time
 
 protocol='http'
-topDomainName=['.com','.cn','.net','.de','.fi','.co.jp', '.ru','.me', '.edu']
+topDomainName=['.com','.cn','.net','.de','.fi','.co.jp', '.ru','.me', '.edu', '.af', '.ag', '.ai', '.ar', '.au', '.bd', '.bh', '.bn', '.bo', '.br', '.bz', '.co', '.cu', '.cy', '.do', '.ec', '.eg', '.et', '.fj', '.gh', '.gi', '.gt', '.hk', '.jm', '.kh', '.kw', '.lb', '.ly', '.mm', '.mt', '.mx', '.my', '.na', '.nf', '.ng', '.ni', '.np', '.om', '.pa', '.pe', '.pg', '.ph', '.pk', '.pr', '.py', '.qa', '.sa', '.sb', '.sg', '.sl', '.sv', '.tj', '.tr', '.tw', '.ua', '.uy', '.vc', '.vn']
 argv=sys.argv[1:]
 print(argv)
+start = time.time()
 
 logging.basicConfig(level=logging.INFO)
 urls=[]
@@ -33,5 +35,7 @@ for i in range(len(topDomainName)):
 for i in range(len(urls)):
 	logging.info('Openning: %s',urls[i])
 	webbrowser.open_new_tab(urls[i])
+end  = time.time()
+logging.info('Costs seconds: %f s', end - start)
 #webbrowser.open_new_tab(url)
 

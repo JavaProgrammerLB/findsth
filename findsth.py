@@ -32,7 +32,9 @@ for i in range(len(topDomainName)):
 			urls.append(url)
 			logging.info('Available url:%s',url)
 
-for i in range(len(urls)):
+availableCount = len(urls)
+logging.info('availableCount: %d',availableCount)
+for i in range(availableCount):
 	logging.info('Openning: %s',urls[i])
 	webbrowser.open_new_tab(urls[i])
 end  = time.time()

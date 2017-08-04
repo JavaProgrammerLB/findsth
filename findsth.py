@@ -19,8 +19,8 @@ for i in range(len(topDomainName)):
 		url=protocol + '://' + 'www.' + domainName + aTop
 		logging.info('url is: %s',url)
 		try:
-			req=requests.get(url, timeout=10)
-			code=req.status_code
+			res=requests.head(url, timeout=10)
+			code=res.status_code
 		except requests.exceptions.ReadTimeout:
 			code=-1
 		except requests.exceptions.ConnectionError:

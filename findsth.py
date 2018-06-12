@@ -21,6 +21,8 @@ for i in range(len(topDomainName)):
         url=protocol + '://' + 'www.' + domainName + aTop
         logging.info('url is: %s',url)
         domains.append(url)
+        url=protocol + '://' + domainName + aTop
+        domains.append(url)
 
 print(domains)
 

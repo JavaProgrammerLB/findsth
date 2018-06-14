@@ -40,7 +40,7 @@ def con(url):
     if code == 200:
         urls.append(url)
 
-pool = ThreadPool(9)
+pool = ThreadPool(10)
 pool.map(con, domains)
 pool.close()
 pool.join()

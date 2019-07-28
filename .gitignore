@@ -2,3 +2,4 @@ test/
 .vscode/
 .idea
 geckodriver.log
+*.iml
